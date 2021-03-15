@@ -1,0 +1,42 @@
+%card-command
+\newlength{\ralen}
+\setlength{\ralen}{-0.8ex}
+\newlength{\ralent}
+\setlength{\ralent}{-0.4ex}
+\newlength{\ralend}
+\setlength{\ralend}{-1.0ex}
+\newcommand{\blk}{\raisebox{\ralen}{\framebox(11,12){$\clubsuit$}}}
+\newcommand{\red}{\raisebox{\ralen}{\framebox(11,12){$\heartsuit$}}}
+\newcommand{\back}{\raisebox{\ralen}{\framebox(11,12){\textbf{\textup{?}}}}}
+\newcommand{\backt}{\raisebox{\ralent}{\framebox(11,12){\textbf{\textup{?}}}}}
+\newcommand{\backd}{\raisebox{\ralend}{\framebox(11,12){\textbf{\textup{?}}}}}
+\newcommand{\card}[1]{\raisebox{\ralen}{\framebox(11,12){#1}}}
+\newcommand{\twocommitment}[1]{\underbrace{\back \,\back}_{#1}}
+\newcommand{\thcommitment}[1]{\underbrace{\back \ \ \  \,\back \ \ \ \,\back}_{#1}}
+\newcommand{\thrcommitment}[1]{\underbrace{\back \ \ \  \,\back \ \ \ \,\back}_{#1}}
+\newcommand{\sequence}[1]{\underbrace{\back \,''\back\,\cdots\,\back}_{#1}}
+\newcommand{\sequenceplus}[1]{\underbrace{\back \,\back\,\cdots\,\back\,\back}_{#1}}
+\newcommand{\partcommit}[1]{\underbrace{\back}_{#1}}
+\newcommand{\mcards}[2]{\overbrace{\underbrace{\back \,\back\,\cdots\,\back}_{#1}}^{#2}}
+\newcommand{\diam}{\raisebox{\ralen}{\framebox(11,12){$\diamondsuit$}}}
+
+%operation-command
+\newcommand{\atm}[1]{{\mathsf{atom}}({#1})}
+\newcommand{\topc}[1]{{\mathsf{top}}({#1})}
+\newcommand{\swap}[1]{{\mathsf{swap}}({#1})}
+\newcommand{\turn}[2]{{\mathsf{turn}_{#1}}({#2})}
+\newcommand{\perm}[2]{{\mathsf{perm}_{#1}}({#2})}
+\newcommand{\shuf}[3]{{\mathsf{shuf}_{{#1},{#2}}({#3})}}
+\newcommand{\rflip}[3]{{\mathsf{rflip}_{{#1},{#2}}({#3})}}
+\newcommand{\vis}[1]{{\mathsf{vis}({#1})}}
+\newcommand{\fir}[1]{{\mathsf{top}({#1})}}
+\newcommand{\Vis}{\mathsf{Vis}}
+\newcommand{\aturn}[1]{(\mathsf{turn},{#1})}
+\newcommand{\aperm}[1]{(\mathsf{perm},{#1})}
+\newcommand{\ashuf}[1]{(\mathsf{shuf},{#1})}
+\newcommand{\arflip}[2]{(\mathsf{rflip},{#1},{#2})}
+\newcommand{\result}[1]{(\mathsf{result},{#1})}
+\newcommand{\remove}[2]{{\mathsf{remove}_{#1}}({#2})}
+\newcommand{\mD}{\mathcal{D}}
+\newcommand{\mP}{\mathcal{P}}
+\newcommand{\qs}[1]{q_\mathrm{#1}}

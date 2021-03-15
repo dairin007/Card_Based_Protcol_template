@@ -1,0 +1,126 @@
+\RequirePackage{plautopatch}
+\documentclass[12pt,a4paper,report,dvipdfmx,uplatex]{jsbook}
+ 
+\usepackage{latexsym} %記号追加
+\usepackage{cite} %cite拡張
+\usepackage{mathtools,amsmath,amsthm,amssymb} %数学関係
+\usepackage{algpseudocode}	%擬似コード
+\usepackage{enumerate}	%列挙用
+\usepackage{scalerel}  %記号の伸縮
+\usepackage{titlesec} %見出しの見た目変更
+\usepackage{url} %URL記述
+\usepackage{setspace} %余白制御
+\usepackage{hyperref,xcolor} %相互参照
+\usepackage{pxjahyper} %相互参照の日本語補完
+\usepackage{card_based_command} %カードコマンド
+
+%font-setting
+\usepackage{otf}
+\usepackage[noalphabet,unicode]{pxchfon}
+\usepackage[T1]{fontenc}
+\usepackage{type1cm}
+\usepackage{newtxtext,newtxmath}
+
+
+%section-space-setting
+\titlespacing{\chapter}{0pt}{0pt}{20pt}
+% hyperref-option
+\hypersetup{
+setpagesize=false,
+bookmarksnumbered=true,
+bookmarksopen=true,
+colorlinks=true,
+linkcolor=blue,
+citecolor=black,
+urlcolor=black,}
+\hyphenpenalty=1000\relax
+\exhyphenpenalty=1000\relax
+\sloppy
+
+%nfrac{}{}=文書中frac{}{}
+\makeatletter
+\def\nfrac#1#2{\check@mathfonts%
+    \raise.5ex\hbox{\the\scriptfont0 #1}%
+    \kern-.1em/\kern-.15em%
+    \lower.25ex\hbox{\the\scriptfont0 #2}}
+\makeatother
+%脚注
+\makeatletter
+\def\Hline{%
+\noalign{\ifnum0=`}\fi\hrule \@height 2pt \futurelet
+\reserved@a\@xhline}
+\makeatother
+
+% 数式(演算子など)のスペースを詰める
+\thickmuskip=1.0\thickmuskip
+\medmuskip=0.8\medmuskip
+\thinmuskip=0.8\thinmuskip
+
+\theoremstyle{definition}
+\newtheorem{thm}{定理}
+\renewcommand{\proofname}{\bf{証明}}
+\newtheorem{definition}{定義}
+
+
+\begin{document}
+
+
+\begin{titlepage}
+	\begin{flushright}
+		{\large 論文}
+	\end{flushright}
+	\begin{center}
+		\vspace{180truept}
+		{\LARGE タイトル\\}
+		\vspace{40truept}
+		{\large
+			大学学科\\
+			研究室\\
+			名前（学籍番号）\\
+		}
+		\vspace{30truept}
+		{\large 年月日}
+	\end{center}
+\end{titlepage}
+
+\tableofcontents
+
+\chapter*{概要}\label{s:abst}
+\addcontentsline{toc}{section}{概要}
+
+
+
+\chapter{序論}\label{s:intro}
+\section{研究背景}\label{s:back}
+
+
+\section{関連研究}\label{s:Rwork}
+
+
+\section{本稿の貢献}\label{s:contr}
+
+
+
+\chapter{準備}
+
+
+
+\chapter{結論}
+
+
+\chapter*{謝辞}
+\addcontentsline{toc}{section}{謝辞}
+
+
+\begin{spacing}{0.92}
+	\bibliographystyle{splncs}
+	\bibliography{paper}
+\end{spacing}
+
+
+\appendix
+\renewcommand{\theequation}{A.\arabic{equation}}
+\chapter{}
+
+
+\end{document}

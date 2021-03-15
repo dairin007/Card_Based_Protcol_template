@@ -1,0 +1,60 @@
+{
+    "editor.wordWrap": "on",
+    "editor.wordSeparators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?．。，、（）「」［］｛｝《》てにをはがのともへでや",
+    "latex-workshop.message.latexlog.exclude": [
+        "(Font shape `(JY1|JT1|JY2|JT2)(/.*)(((sl|it|sc)'.*)|(b/n))|Some font shapes were not available.*)",
+    ],
+    "editor.suggestSelection": "recentlyUsedByPrefix",
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": false
+    },
+    "latex-workshop.latex.autoBuild.run": "onFileChange",
+    "latex-workshop.intellisense.package.enabled": true,
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk 🔃",
+            "tools": [
+                "latexmk"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-pv",
+                "%DOC%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.autoClean.run": "onFailed",
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.ist",
+        "*.fls",
+        "*.fdb_latexmk",
+        "*_minted*",
+        "*.snm",
+        "*.nav",
+        "*.vrb",
+        "*.dvi",
+        "*.synctex.gz"
+    ],
+}
